@@ -1,0 +1,4 @@
+/.vagrant
+/static
+*.pyc
+/GitHubJanitor/settings/local.py
