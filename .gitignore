@@ -2,3 +2,22 @@
 /static
 *.pyc
 /GitHubJanitor/settings/local.py
+
+# SublimeText
+*.sublime-workspace
+
+# Vim
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
