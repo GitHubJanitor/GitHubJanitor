@@ -28,9 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 ADMINS = [
-    # ('Your Name', 'your_email@example.com'),
+    ('Federico Castagnini', 'federico.castagnini@gmail.com'),
 ]
-
 
 # Application definition
 
@@ -121,9 +120,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-gb'
+LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Europe/London'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
@@ -166,7 +165,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_SUBJECT_PREFIX = '[GitHubJanitor] '
 
-INTERNAL_IPS = ['127.0.0.1', '10.0.2.2']
+INTERNAL_IPS = ['127.0.0.1']
 
 
 # django-compressor settings
