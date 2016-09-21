@@ -5,4 +5,4 @@ django-libsass>=0.6
 django-debug-toolbar>=1.4
 gunicorn>=19.1.1
 Fabric>=1.10.0
-python-social-auth>=0.0
+github3.py>=0.9

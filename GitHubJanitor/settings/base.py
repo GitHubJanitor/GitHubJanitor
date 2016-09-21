@@ -201,3 +201,6 @@ LOGGING = {
         },
     }
 }
+
+GITHUB_USERNAME = 'GitHubJanitor'
+GITHUB_TOKEN = '' # enter this value in local.py
