@@ -6,12 +6,6 @@ Vagrant::Config.run do |config|
 	config.vm.box = "ubuntu/trusty32"
 	config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-i386-vagrant-disk1.box"
 
-    if Vagrant.has_plugin?("vagrant-cachier")
-        # Configure cached packages to be shared between instances of the same base box.
-        # More info on the "Usage" link above
-        config.cache.scope = :box
-    end
-
 	# As an alternative to precise32, VMs can be built from the 'django-base' box as defined at
 	# https://github.com/torchbox/vagrant-django-base , which has more of the necessary server config
 	# baked in and thus takes less time to initialise. To go down this route, you will need to build
@@ -29,6 +23,7 @@ Vagrant::Config.run do |config|
 	# Forward a port from the guest to the host, which allows for outside
 	# computers to access the VM, whereas host only networking does not.
 	config.vm.forward_port 8000, 8000
+	config.vm.forward_port 5432, 5432
 	
 	# Share an additional folder to the guest VM. The first argument is
 	# an identifier, the second is the path on the guest to mount the
