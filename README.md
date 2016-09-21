@@ -15,6 +15,10 @@ Run the following commands:
       (then, within the SSH session:)
     ./manage.py runserver 0.0.0.0:8000
 
+    # create admin user
+    echo "from django.contrib.auth.models import User; User.objects.create_superuser('federico', 'federico.castagnini@gmail.com', 'changeme')" | python manage.py shell
+
+
 This will make the app accessible on the host machine as http://localhost:8000/ . The codebase is located on the host
 machine, exported to the VM as a shared folder; code editing and Git operations will generally be done on the host.
 
