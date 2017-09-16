@@ -3,10 +3,10 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("<H1>Turn this page insto a dashboard</H1>")
+    return HttpResponse("<H1>Turn this page into a dashboard</H1>")
 
 def status(request):
-    return HttpResponse("<H1>Put a globlal status page here</H1>")
+    return HttpResponse("<H1>Put a global status page here</H1>")
 
 def github_test(request):
     response = "<H1>This page will test the github user credentials</H1>"

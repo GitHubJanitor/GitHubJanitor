@@ -2,30 +2,29 @@
 TODO: CI badge
 
 # Setup
-Install Django on your host machine. (Be sure to explicitly uninstall earlier versions first, or use a virtualenv -
-having earlier versions around seems to cause pre-1.4-style settings.py and urls.py files to be generated alongside the
-new ones.)
 
+# Test/dev environment
 Run the following commands:
 
+    brew install python3
     git clone git@github.com:GitHubJanitor/GitHubJanitor.git
     cd GitHubJanitor
-    vagrant up
-    vagrant ssh
-      (then, within the SSH session:)
-    ./manage.py runserver 0.0.0.0:8000
+
+    # this will bootstrap the virtualenv
+    source setup_virtualenv.sh
+
+    # manage the database
+    python3 ./manage.py migrate
 
     # create admin user
     echo "from django.contrib.auth.models import User; User.objects.create_superuser('federico', 'federico.castagnini@gmail.com', 'changeme')" | python manage.py shell
 
+    # launch the dev service
+    ./manage.py runserver 0.0.0.0:8000
 
-This will make the app accessible on the host machine as http://localhost:8000/ . The codebase is located on the host
-machine, exported to the VM as a shared folder; code editing and Git operations will generally be done on the host.
-
-# See also
-Based on the django template https://github.com/torchbox/vagrant-django-template
+This will make the app accessible on the host machine as http://localhost:8000/ .
 
 # Authors
 - [Federico Castagnini](https://github.com/facastagnini)
-- [Patricio Palladino](https://github.com/alcuadrado)
 - [Diego Alifano](https://github.com/diegus83)
+- [Srikanth Viswanathan](https://github.com/srikanth-viswanathan)

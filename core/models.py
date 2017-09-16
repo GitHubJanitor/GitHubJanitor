@@ -7,7 +7,7 @@ class TargetFile(models.Model):
     pub_date = models.DateTimeField('date this file name started being targeted', default=datetime.now)
 
 class GitHub_repo(models.Model):
-    last_scan_date = models.DateTimeField('date match found', default=datetime.now)
+    scan_date = models.DateTimeField('date match found', default=datetime.now)
     look_for_file = models.ForeignKey(TargetFile, on_delete=models.CASCADE)
     github_username = models.CharField('github username', max_length=200)
     github_repo = models.CharField('github repo', max_length=200)

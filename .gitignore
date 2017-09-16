@@ -1,6 +1,7 @@
-/.vagrant
+/.virtualenv
 /static
 /GitHubJanitor/settings/local.py
+GitHubJanitor.sqlite
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

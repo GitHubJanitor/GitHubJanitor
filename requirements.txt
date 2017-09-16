@@ -1,5 +1,4 @@
-Django>=1.9,<1.10
-psycopg2>=2.6
+Django
 django-compressor>=1.6
 django-libsass>=0.6
 django-debug-toolbar>=1.4

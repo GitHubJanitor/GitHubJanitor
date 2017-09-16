@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -25,10 +24,10 @@ SECRET_KEY = '@5l^x0rru)7nm4ku2d$pasi$swvcmled5c#8+y64ad6!0v0p74'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 ADMINS = [
-    ('Federico Castagnini', 'federico.castagnini@gmail.com'),
+    ('Federico Ariel Castagnini', 'federico.castagnini@gmail.com'),
 ]
 
 # Application definition
@@ -40,12 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'compressor',
-    'debug_toolbar',
+    # 'debug_toolbar',
 
     # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django.contrib.admindocs',
 
     'core',
 ]
@@ -59,6 +57,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'GitHubJanitor.urls'
@@ -87,13 +86,12 @@ WSGI_APPLICATION = 'GitHubJanitor.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'GitHubJanitor',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'GitHubJanitor.sqlite',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',  # Set to empty string for localhost.
         'PORT': '',  # Set to empty string for default.
-        'CONN_MAX_AGE': 600,  # number of seconds database connections should persist for
     }
 }
 
