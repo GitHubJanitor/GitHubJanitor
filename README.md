@@ -22,6 +22,9 @@ Run the following commands:
     # launch the dev service
     ./manage.py runserver 0.0.0.0:8000
 
+    # launch [celery](http://www.celeryproject.org/) to control background jobs
+    # ./manage.py celeryd_detach
+
 This will make the app accessible on the host machine as http://localhost:8000/ .
 
 # Authors
